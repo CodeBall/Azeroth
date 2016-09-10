@@ -4,7 +4,7 @@ from azeroth.app_runner import mysql_db as db
 class Card(db.Model):
     __tablename__ = 'card'
     id = db.Column(db.Integer, primary_key=True)
-    card_name = db.Column(db.String(100), index=True, nullable=False, default='default')
+    card_name = db.Column(db.String(100), index=True, nullable=False, default='default', unique=True)
     card_nick_name = db.Column(db.String(100), index=True, default='default')
     card_expend = db.Column(db.Integer, index=True, nullable=False) # 消耗
     card_attack = db.Column(db.Integer, index=True, nullable=False) # 攻击力
