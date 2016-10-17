@@ -1,0 +1,1 @@
+from azeroth.app_runner import mysql_db as db
